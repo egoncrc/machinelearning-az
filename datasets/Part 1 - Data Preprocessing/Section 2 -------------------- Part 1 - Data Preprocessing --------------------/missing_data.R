@@ -10,3 +10,6 @@ dataset$Age = ifelse(is.na(dataset$Age),
 dataset$Salary = ifelse(is.na(dataset$Salary),
                         ave(dataset$Salary, FUN = function(x) mean(x, na.rm = TRUE)),
                         dataset$Salary)
+#otra forma posible:
+#dataset$Age[is.na(dataset$Age)] <-mean(dataset$Age,na.rm=T)
+#dataset$Salary[is.na(dataset$Salary)] <-mean(dataset$Salary,na.rm=T)
